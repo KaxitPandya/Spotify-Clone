@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+header{
+    background-color: black;
+    color: white;
+    height: 10vh;
+    font-family: 'Roboto Slab', serif;
+}
+ul{
+    height: 10vh;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    list-style: none;
+}
+li{
+    display: inline;
+    padding: 0.5vw;
+    font-size: 20px;
+    
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.logo img{
+    height: 6vh;
+    padding: 10px;
+}
+
+.container{
+    min-height: 62vh;
+    background-color: black;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 12px;
+    padding: 30px;
+    background: url("bg.jpg") no-repeat  ;
+    background-size: cover;
+}
+
+.bottom{
+    height: 12vh ;
+    position: sticky;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*  WE DO FLEX DIRECTION COLUMN TO BRING IT DOWN  */
+    flex-direction: column;
+}
+
+.songList{
+    width: 35vw;
+}
+.songItemContainer{
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+.songItem{
+    height: 50px;
+    display: flex;
+    background-color: white;
+    color: black;
+    margin: 12px 0;
+    border-radius: 30px;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.songItem img{
+    width: 43px;
+    margin: 0 23px;
+    border-radius: 30px;
+    
+}
+
+.timeStamp{
+    padding: 20px;
+}
+
+/*  we can also target it as .timeStamp i {  } */
+span .fa-play-circle{
+    padding: 10px;
+    cursor: pointer;
+}
+
+.icons{
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+#progressBar{
+    width: 80vw;
+    cursor: pointer;
+
+}
+
+.songInfo{
+    position: absolute;
+    left: 10vw;
+    font-family: 'Roboto Slab', serif;
+
+}
+
+.songInfo img{
+    /* RATHER THAN USING VISIBILITY HIDDEN WE CAN USE TRANSITION OPACITY TO MAKE AN EFFECT OF POPING OUT  */
+    opacity: 0;
+    transition: opacity 0.5s ease-in ;
+}
+
+@media screen and (max-width : 1080px) {
+    .songList{
+        width: 80vw;
+    }
+    .songItem{
+        padding: 2px;
+        margin: 2px;
+    }
+    
+}
+
+@media screen and (max-width : 450px) {
+    header ul li{
+        font-size: 1rem;
+    }
+    .bottom{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        
+    }
+    .icons{
+        bottom: 0;
+    }
+    .songInfo{
+        width: 50vw;
+        
+    }
+}
